@@ -46,8 +46,8 @@ cd musicbrainz-server
 
 # i have a preconfigured server file, this command will copy it to where it supposed to be
 cp lib/DBDefs.pm.sample lib/DBDefs.pm
-sudo rm lib/DBDefs.pm
-sudo cp /home/roger/DBDefs.pm lib/
+
+sudo cp /home/roger/DBDefs.pm lib/DBDefs.pm
 
 ######    INSTALL PERL DEPENDENCIES    #######
 
@@ -86,10 +86,9 @@ sudo make install
 cd ..
 
 # setup postgres authentication
-# have to delete file thats there first 
 # i have a preconfigured file that i will move to its necesary location
-sudo rm /etc/postgresql/9.3/main/pg_hba.conf
-sudo cp /home/roger/mb/pg_hba.conf /etc/postgresql/9.3/main/
+
+sudo cp /home/roger/mb/pg_hba.conf /etc/postgresql/9.3/main/pg_hba.conf
 
 #install necessary perl module
 sudo apt-get install libjson-xs-perl
